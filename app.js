@@ -31,6 +31,14 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'aplication/javascript' });
             res.end(data);
         });
+    } else if (req.url === '/win.html' && req.method === 'GET') {
+        fs.readFile('index.html', 'utf8', (err, data) => {
+            if (err) {
+                serverErrorLog();
+            }
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(data);
+        });
     } else {
         res.writeHead(404);
         res.end('서빙 오류');
