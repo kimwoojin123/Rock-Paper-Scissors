@@ -16,7 +16,7 @@ function randomImoji() {
     imojies.textContent = imojiLi[a];
 }
 
-setInterval(randomImoji, 15);
+setInterval(randomImoji, 50);
 
 let score = 0;
 
