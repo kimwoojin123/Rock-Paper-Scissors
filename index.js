@@ -49,3 +49,18 @@ scissor.onclick = () => {
         alert('비겼습니다');
     }
 };
+
+paper.onclick = () => {
+    clearInterval();
+    if (a === 0) {
+        alert('이겼습니다.');
+        score = score + 10;
+        userScore.textContent = score;
+    } else if (a === 1) {
+        alert('졌습니다');
+        score = score - 10;
+        userScore.textContent = score;
+    } else {
+        alert('비겼습니다');
+    }
+};
