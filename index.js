@@ -16,7 +16,7 @@ function randomImoji() {
     imojies.textContent = imojiLi[a];
 }
 
-setInterval(randomImoji, 15);
+setInterval(randomImoji, 50);
 
 let score = 0;
 
@@ -64,3 +64,7 @@ paper.onclick = () => {
         alert('비겼습니다');
     }
 };
+
+if (score >= 100) {
+    window.location.href = 'http://localhost:8000/win';
+}
