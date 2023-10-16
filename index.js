@@ -1,9 +1,13 @@
-const imojiLi = ['👊', '✌', '🖐'];
 let rock = document.getElementById('rock');
 let scissor = document.getElementById('scissor');
 let paper = document.getElementById('paper');
 let userScore = document.getElementById('user_score');
 let imojies = document.getElementById('imojies');
+
+let imojiLi = new Array();
+imojiLi[0] = '👊';
+imojiLi[1] = '✌';
+imojiLi[2] = '🖐';
 
 let a;
 
@@ -17,6 +21,7 @@ setInterval(randomImoji, 15);
 let score = 0;
 
 rock.onclick = () => {
+    clearInterval();
     if (a === 0) {
         alert('비겼습니다');
     } else if (a === 1) {
