@@ -2,7 +2,7 @@ const imojiLi = ['👊', '✌', '🖐'];
 let rock = document.getElementById('rock');
 let scissor = document.getElementById('scissor');
 let paper = document.getElementById('paper');
-let userScore = document.getElementById('score');
+let userScore = document.getElementById('user_score');
 let imojies = document.getElementById('imojies');
 
 let a;
