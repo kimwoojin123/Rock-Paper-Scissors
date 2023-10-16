@@ -64,3 +64,7 @@ paper.onclick = () => {
         alert('비겼습니다');
     }
 };
+
+if (score >= 100) {
+    window.location.href = 'http://localhost:8000/win';
+}
