@@ -2,7 +2,7 @@ const imojiLi = ['👊', '✌', '🖐'];
 let rock = document.getElementById('rock');
 let scissor = document.getElementById('scissor');
 let paper = document.getElementById('paper');
-
+let userScore = document.getElementById('score');
 let imojies = document.getElementById('imojies');
 
 let a;
@@ -22,8 +22,10 @@ rock.onclick = () => {
     } else if (a === 1) {
         alert('이겼습니다');
         score = score + 10;
+        userScore.textContent = score;
     } else {
         alert('졌습니다');
         score = score - 10;
+        userScore.textContent = score;
     }
 };
