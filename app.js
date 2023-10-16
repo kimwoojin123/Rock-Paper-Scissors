@@ -31,5 +31,8 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'aplication/javascript' });
             res.end(data);
         });
+    } else {
+        res.writeHead(404);
+        res.end('서빙 오류');
     }
 });
