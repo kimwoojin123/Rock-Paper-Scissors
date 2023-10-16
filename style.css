@@ -1,0 +1,33 @@
+#root {
+  width: 100vw;
+  height: 100vh; }
+  #root > div:first-child {
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #root > div:nth-child(2) {
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+#imojies {
+  font-size: 200px; }
+
+#rock {
+  width: 4vw;
+  height: 8vh;
+  font-size: 40px; }
+
+#scissor {
+  width: 4vw;
+  height: 8vh;
+  font-size: 40px; }
+
+#paper {
+  width: 4vw;
+  height: 8vh;
+  font-size: 40px; }
