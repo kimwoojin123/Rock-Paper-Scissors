@@ -23,5 +23,13 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'text/css' });
             res.end(data);
         });
+    } else if (req.url === '/index.js' && req.method === 'GET') {
+        fs.readFile('index.js', 'utf8', (err, data) => {
+            if (err) {
+                serverErrorLog();
+            }
+            res.writeHead(200, { 'Content-Type': 'aplication/javascript' });
+            res.end(data);
+        });
     }
 });
