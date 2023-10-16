@@ -36,3 +36,8 @@ const server = http.createServer((req, res) => {
         res.end('서빙 오류');
     }
 });
+
+const PORT = 8000;
+server.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}/`);
+});
