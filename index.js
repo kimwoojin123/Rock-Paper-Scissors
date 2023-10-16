@@ -13,3 +13,17 @@ function randomImoji() {
 }
 
 setInterval(randomImoji, 15);
+
+let score = 0;
+
+rock.onclick = () => {
+    if (a === 0) {
+        alert('비겼습니다');
+    } else if (a === 1) {
+        alert('이겼습니다');
+        score = score + 10;
+    } else {
+        alert('졌습니다');
+        score = score - 10;
+    }
+};
