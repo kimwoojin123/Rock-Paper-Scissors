@@ -82,3 +82,9 @@ function locateLose() {
         return (window.location.href = 'http://localhost:8000/lose.html/');
     }
 }
+
+let reset = document.getElementById('reset');
+
+reset.onclick = () => {
+    location.reload();
+};
