@@ -28,11 +28,12 @@ rock.onclick = () => {
         alert('이겼습니다');
         score = score + 10;
         userScore.textContent = score;
-        locate();
+        locateWin();
     } else {
         alert('졌습니다');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     }
 };
 
@@ -42,12 +43,12 @@ scissor.onclick = () => {
         alert('졌습니다.');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     } else if (a === 2) {
         alert('이겼습니다');
-
         score = score + 10;
         userScore.textContent = score;
-        locate();
+        locateWin();
     } else {
         alert('비겼습니다');
     }
@@ -59,20 +60,25 @@ paper.onclick = () => {
         alert('이겼습니다.');
         score = score + 10;
         userScore.textContent = score;
-        locate();
+        locateWin();
     } else if (a === 1) {
         alert('졌습니다');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     } else {
         alert('비겼습니다');
     }
 };
 
-function locate() {
-    if (score >= 20) {
+function locateWin() {
+    if (score >= 30) {
         return (window.location.href = 'http://localhost:8000/win.html/');
     }
 }
 
-locate();
+function locateLose() {
+    if (score <= -30) {
+        return (window.location.href = 'http://localhost:8000/lose.html/');
+    }
+}
