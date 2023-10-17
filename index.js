@@ -65,6 +65,7 @@ paper.onclick = () => {
     }
 };
 
-if (score >= 100) {
-    window.location.href = 'http://localhost:8000/win';
+// 왜 조건 정해줬는데 이동안되지? location href가 안먹나?
+if (score >= 20) {
+    window.location.href = 'http://localhost:8000/win.html/';
 }
