@@ -28,6 +28,7 @@ rock.onclick = () => {
         alert('이겼습니다');
         score = score + 10;
         userScore.textContent = score;
+        locate();
     } else {
         alert('졌습니다');
         score = score - 10;
@@ -43,8 +44,10 @@ scissor.onclick = () => {
         userScore.textContent = score;
     } else if (a === 2) {
         alert('이겼습니다');
+
         score = score + 10;
         userScore.textContent = score;
+        locate();
     } else {
         alert('비겼습니다');
     }
@@ -56,6 +59,7 @@ paper.onclick = () => {
         alert('이겼습니다.');
         score = score + 10;
         userScore.textContent = score;
+        locate();
     } else if (a === 1) {
         alert('졌습니다');
         score = score - 10;
@@ -65,6 +69,10 @@ paper.onclick = () => {
     }
 };
 
-if (score >= 100) {
-    window.location.href = 'http://localhost:8000/win';
+function locate() {
+    if (score >= 20) {
+        return (window.location.href = 'http://localhost:8000/win.html/');
+    }
 }
+
+locate();
