@@ -28,10 +28,12 @@ rock.onclick = () => {
         alert('이겼습니다');
         score = score + 10;
         userScore.textContent = score;
+        locateWin();
     } else {
         alert('졌습니다');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     }
 };
 
@@ -41,10 +43,12 @@ scissor.onclick = () => {
         alert('졌습니다.');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     } else if (a === 2) {
         alert('이겼습니다');
         score = score + 10;
         userScore.textContent = score;
+        locateWin();
     } else {
         alert('비겼습니다');
     }
@@ -56,16 +60,25 @@ paper.onclick = () => {
         alert('이겼습니다.');
         score = score + 10;
         userScore.textContent = score;
+        locateWin();
     } else if (a === 1) {
         alert('졌습니다');
         score = score - 10;
         userScore.textContent = score;
+        locateLose();
     } else {
         alert('비겼습니다');
     }
 };
 
-// 왜 조건 정해줬는데 이동안되지? location href가 안먹나?
-if (score >= 20) {
-    window.location.href = 'http://localhost:8000/win.html/';
+function locateWin() {
+    if (score >= 30) {
+        return (window.location.href = 'http://localhost:8000/win.html/');
+    }
+}
+
+function locateLose() {
+    if (score <= -30) {
+        return (window.location.href = 'http://localhost:8000/lose.html/');
+    }
 }
