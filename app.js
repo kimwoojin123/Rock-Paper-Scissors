@@ -1,7 +1,9 @@
 const http = require('http');
 const fs = require('fs');
+const url = require(`url`);
 
 const server = http.createServer((req, res) => {
+    let parsedURL = url.parse(req.url, true);
     function serverErrorLog() {
         res.writeHead(500);
         return res.end('서버오류');
@@ -31,8 +33,8 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'aplication/javascript' });
             res.end(data);
         });
-    } else if (req.url === '/win.html' && req.method === 'GET') {
-        fs.readFile('index.html', 'utf8', (err, data) => {
+    } else if (parsedURL === '/win.html' && req.method === 'GET') {
+        fs.readFile('win.html', 'utf8', (err, data) => {
             if (err) {
                 serverErrorLog();
             }
