@@ -41,6 +41,14 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'text/html' });
             res.end(data);
         });
+    } else if (parsedURL === '/lose.html' && req.method === 'GET') {
+        fs.readFile('lose.html', 'utf8', (err, data) => {
+            if (err) {
+                serverErrorLog();
+            }
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(data);
+        });
     } else {
         res.writeHead(404);
         res.end('서빙 오류');
