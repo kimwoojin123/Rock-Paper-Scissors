@@ -88,9 +88,3 @@ let reset = document.getElementById('reset');
 reset.onclick = () => {
   location.reload();
 };
-
-let reset = document.getElementById('reset');
-
-reset.onclick = () => {
-  location.reload();
-};
